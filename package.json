@@ -2,7 +2,7 @@
     "name": "xvnmlext",
     "displayName": "XVNMLExt",
     "description": "Language Support for XVNML",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "engines": {
         "vscode": "^1.67.0"
     },
