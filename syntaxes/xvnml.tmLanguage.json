@@ -195,6 +195,12 @@
 		},
 		{
 			"include": "#promptLine"
+		},
+		{
+			"include": "#tuple"
+		},
+		{
+			"include": "#prompt"
 		}
 	],
 	"repository": {
@@ -232,15 +238,42 @@
 			"end": "\\}",
 			"patterns": [
 				{
-					"match": "([-_a-zA-Z0-9]+)",
+					"match": "([_a-zA-Z0-9]+)",
 					"name": "entity.name.tag.localname.xvnml"
 				},
 				{
-					"match": "(::)",
+					"match": "(::)|(\\|)|(\\,)",
 					"name": "punctuation.definition.tag.xvnml"
+				},
+				{
+					"match": "([\"'_a-zA-Z0-9]+)",
+					"name": "entity.name.tag.localname.xvnml"
 				}
 			],
 			"name": "entity.name.tag.localname.xvnml"
+		},
+		"prompt":{
+			"begin": "\\(!?",
+			"end": "(\\)\\>)",
+			"patterns": [
+				{
+					"include": "#doublequotedString"
+				}
+			]
+		},
+		"tuple":{
+			"begin": "\\{!?",
+			"end": "\\}",
+			"patterns": [
+				{
+					"match": "([\"\\'-_a-zA-Z0-9]+)",
+					"name": "entity.name.tag.localname.xvnml"
+				},
+				{
+					"match": "(\\,)",
+					"name": "punctuation.definition.tag.xvnml"
+				}
+			]
 		},
 		"reference":{
 			"patterns": [
@@ -278,6 +311,9 @@
 				},
 				{
 					"include": "#eventTriggers"
+				},
+				{
+					"include": "#prompt"
 				}
 			]
 		},
