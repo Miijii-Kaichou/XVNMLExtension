@@ -2,7 +2,17 @@
     "name": "xvnmlext",
     "displayName": "XVNMLExt",
     "description": "Language Support for XVNML",
-    "version": "0.0.2",
+    "version": "0.1.0",
+    "preview": true,
+    "publisher": "Miijii",
+    "repository": {
+        "url": "https://github.com/Miijii-Kaichou/XVNML.git"
+    },
+    "author": {
+        "name": "Miijii",
+        "email": "miijii@enjyoii.co",
+        "url": "https://www.enjyoii.co/"
+    },
     "engines": {
         "vscode": "^1.67.0"
     },
