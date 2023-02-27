@@ -88,7 +88,7 @@
 			"name": "meta.tag.no-content.xvnml",
 			"patterns": [
 				{
-					"include": "#tagStuff"
+					"include": "#tagIdentifiers"
 				},
 				{
 					"include": "#eventTriggers"
@@ -118,13 +118,16 @@
 			"name": "meta.tag.xvnml",
 			"patterns": [
 				{
-					"include": "#tagStuff"
+					"include": "#tagIdentifiers"
 				},
 				{
 					"include": "#eventTriggers"
 				},
 				{
 					"include": "#reference"
+				},
+				{
+					"include": "#tagFlags"
 				}
 			]
 		},
@@ -443,7 +446,11 @@
 				}
 			]
 		},
-		"tagStuff": {
+		"tagFlags":{
+			"name": "entity.other.attribute-name.namespace.xvnml",
+			"match": "#[-_a-zA-Z0-9]*"
+		},
+		"tagIdentifiers": {
 			"patterns": [
 				{
 					"captures": {
