@@ -204,6 +204,9 @@
 		},
 		{
 			"include": "#prompt"
+		},
+		{
+			"include": "#loadSceneClause"
 		}
 	],
 	"repository": {
@@ -261,6 +264,12 @@
 			"patterns": [
 				{
 					"include": "#doublequotedString"
+				},
+				{
+					"include": "#singlequotedString"
+				},
+				{
+					"include": "#comments"
 				}
 			]
 		},
@@ -422,6 +431,25 @@
 			},
 			"match": "(%)([:a-zA-Z_][:a-zA-Z0-9_.-]*)(|)",
 			"name": "constant.character.parameter-entity.xvnml"
+		},
+		"loadSceneClause":{
+			"begin": "\\[!?",
+			"end": "\\]",
+			"patterns": [
+				{
+					"match": "([_a-zA-Z0-9]+)",
+					"name": "entity.name.tag.localname.xvnml"
+				},
+				{
+					"match": "(::)|(\\|)|(\\,)",
+					"name": "punctuation.definition.tag.xvnml"
+				},
+				{
+					"match": "([\"'_a-zA-Z0-9]+)",
+					"name": "entity.name.tag.localname.xvnml"
+				}
+			],
+			"name": "entity.name.tag.localname.xvnml"
 		},
 		"singlequotedString": {
 			"begin": "'",
