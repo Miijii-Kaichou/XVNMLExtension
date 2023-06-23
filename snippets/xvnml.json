@@ -1,0 +1,168 @@
+{
+    "Generate XVNML Tag": {
+        "prefix": ["gentag"],
+        "body": [
+            "<${1:associateWith} name::\"${2:tagName}\">", 
+            "\t$0", 
+            "</${1:associateWith}>"
+        ],
+        "definition": "Generate tag"
+    },
+
+    "Generate Self-Close XVNML Tag": {
+        "prefix": ["gensc"],
+        "body": [
+            "<${1:associateWith} name::\"${2:tagName}/>\""
+        ],
+        "definition": "Generate tag"
+    },
+
+    "Proxy Tag": {
+        "prefix": ["tpxy", "<proxy"],
+        "body": [
+            "<proxy name::\"${1:tagName}\" lang::\"${2:languageType}\" engine::\"${3:engineTarget}\">", 
+            "\t$0", 
+            "</proxy>"
+        ],
+        "description": "Autofill proxy root tag."
+    },
+
+    "Source Tag": {
+        "prefix": ["tsrc", "<source"],
+        "body": [
+            "<source name::\"${1:tagName}\"", 
+            "\t$0", 
+            "</source>"
+        ],
+        "description": "Autofill source root tag."
+    },
+
+    "Declarative Skriptr Line": {
+        "prefix": ["dsl"],
+        "body": ["@${1:speaker} ${2:dialogue}<"],
+        "description": "Skriptr Line with Declarative Role."
+    },
+
+    "Partial Declarative Skriptr Line": {
+        "prefix": ["pdsl"],
+        "body": ["@${1:speaker}>${2:expression/voice} ${3:dialogue}<"],
+        "description": "Skriptr Line with Declarative Role with Partial Cast Signature."
+    },
+
+    "Full Declarative Skriptr Line": {
+        "prefix": ["dslfull"],
+        "body": ["@${1:speaker}>${2:expression}>${3:voice} ${4:dialogue}<"],
+        "description": "Skriptr Line with Declarative Role and Full Cast Signature."
+    },
+
+    "Interrogative Skripter Line": 
+    {
+        "prefix": ["itrg"],
+        "body": [
+            "?${1:speaker} ${2:dialogue}>>", 
+            "(", 
+            "\t(\"${3:item1}\")>", 
+            "\t\t@${4:speaker} ${5:dialogue}<<", 
+            "\t(\"${6:item2}\")>", 
+            "\t\t@${7:speaker} ${8:dialogue}<<", 
+            "\t(\"${9:item3}\")>", 
+            "\t\t@${10:speaker} ${11:dialogue}<<", 
+            ")"
+        ],
+        "description": "Skriptr Line with Interrogative Role."
+    },
+
+    "Partial Interrogative Skripter Line": 
+    {
+        "prefix": ["pitrg"],
+        "body": [
+            "?${1:speaker}>${2:expression/voice} ${3:dialogue}>>", 
+            "(", 
+            "\t(\"${4:item1}\")>", 
+            "\t\t@${5:speaker} ${6:dialogue}<<", 
+            "\t(\"${7:item2}\")>", 
+            "\t\t@${8:speaker} ${9:dialogue}<<", 
+            "\t(\"${10:item3}\")>", 
+            "\t\t@${11:speaker} ${12:dialogue}<<", 
+            ")"
+        ],
+        "description": "Skriptr Line with Interragive Role and Partial Cast Signature."
+    },
+
+    "Full Interrogative Skripter Line": 
+    {
+        "prefix": ["itrgfull"],
+        "body": [
+            "?${1:speaker}>${2:expression}>${3:voice} ${4:dialogue}>>", 
+            "(", 
+            "\t(\"${5:item1}\")>", 
+            "\t\t@${6:speaker} ${7:dialogue}<<", 
+            "\t(\"${8:item2}\")>", 
+            "\t\t@${9:speaker} ${10:dialogue}<<", 
+            "\t(\"${11:item3}\")>", 
+            "\t\t@${12:speaker} ${13:dialogue}<<", 
+            ")"
+        ],
+        "description": "Skriptr Line with Interragive Role and Full Cast Signature."
+    },
+
+    "Empty Interrogative Skripter Line": 
+    {
+        "prefix": ["-itrg"],
+        "body": [
+            "?${1:speaker} ${2:dialogue}>>", 
+            "(", 
+            "\t$0",
+            ")"
+        ],
+        "description": "Skriptr Line with Interrogative Role."
+    },
+
+    "Empty Partial Interrogative Skripter Line": 
+    {
+        "prefix": ["-pitrg"],
+        "body": [
+            "?${1:speaker}>${2:expression/voice} ${3:dialogue}>>", 
+            "(", 
+            "\t$0",
+            ")"
+        ],
+        "description": "Skriptr Line with Interragive Role and Partial Cast Signature."
+    },
+
+    "Empty Full Interrogative Skripter Line": 
+    {
+        "prefix": ["-itrgfull"],
+        "body": [
+            "?${1:speaker}>${2:expression}>${3:voice} ${4:dialogue}>>", 
+            "(", 
+            "\t$0", 
+            ")"
+        ],
+        "description": "Skriptr Line with Interragive Role and Full Cast Signature."
+    },
+
+    "Propmt":
+    {
+        "prefix": ["!prompt"],
+        "body": [
+            "(\"${1:item}\")>", 
+            "\t@${2:speaker} ${3:dialogue}<<"
+        ],
+        "description": "New Prompt"
+    },
+
+    "Macro Invocation":
+    {
+        "prefix": ["!macro"],
+        "body": ["{${1:macro}}"],
+        "description": "Invoke macro."
+    },
+
+    "Macro Invocation With Args":
+    {
+        "prefix":["!macroa"],
+        "body": ["{${1:macro}::(${2:args}})}"],
+        "description": "Invoke macro w/ args"
+    } 
+}

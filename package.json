@@ -2,7 +2,7 @@
     "name": "xvnmlext",
     "displayName": "XVNMLExt",
     "description": "Language Support for XVNML",
-    "version": "0.1.121",
+    "version": "0.2.11",
     "preview": true,
     "publisher": "Miijii",
     "repository": {
@@ -30,6 +30,12 @@
             "language": "xvnml",
             "scopeName": "source.xvnml",
             "path": "./syntaxes/xvnml.tmLanguage.json"
-        }]
+        }],
+        "snippets": [
+            {
+                "language": "xvnml",
+                "path": "./snippets/xvnml.json"
+            }
+        ]
     }
 }

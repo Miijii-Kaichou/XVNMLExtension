@@ -92,6 +92,9 @@
 				},
 				{
 					"include": "#eventTriggers"
+				},
+				{
+					"include": "#tuple"
 				}
 			]
 		},
@@ -128,6 +131,9 @@
 				},
 				{
 					"include": "#tagFlags"
+				},
+				{
+					"include": "#tuple"
 				}
 			]
 		},
@@ -136,62 +142,6 @@
 		},
 		{
 			"include": "#bare-ampersand"
-		},
-		{
-			"begin": "<%@",
-			"beginCaptures": {
-				"0": {
-					"name": "punctuation.section.embedded.begin.xvnml"
-				}
-			},
-			"end": "%>",
-			"endCaptures": {
-				"0": {
-					"name": "punctuation.section.embedded.end.xvnml"
-				}
-			},
-			"name": "source.java-props.embedded.xml",
-			"patterns": [
-				{
-					"match": "page|include|taglib",
-					"name": "keyword.other.page-props.xvnml"
-				}
-			]
-		},
-		{
-			"begin": "<%[!=]?(?!--)",
-			"beginCaptures": {
-				"0": {
-					"name": "punctuation.section.embedded.begin.xvnml"
-				}
-			},
-			"end": "(?!--)%>",
-			"endCaptures": {
-				"0": {
-					"name": "punctuation.section.embedded.end.xvnml"
-				}
-			},
-			"name": "source.java.embedded.xvnml",
-			"patterns": [
-				{
-					"include": "source.java"
-				}
-			]
-		},
-		{
-			"begin": "<!\\[CDATA\\[",
-			"beginCaptures": {
-				"0": {
-					"name": "punctuation.definition.string.begin.xvnml"
-				}
-			},
-			"end": "]]>",
-			"endCaptures": {
-				"0": {
-					"name": "punctuation.definition.string.end.xvnml"
-				}
-			},
-			"name": "string.unquoted.cdata.xvnml"
 		},
 		{
 			"include": "#speechLine"
