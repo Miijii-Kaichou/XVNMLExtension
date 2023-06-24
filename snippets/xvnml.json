@@ -12,7 +12,7 @@
     "Generate Self-Close XVNML Tag": {
         "prefix": ["gensc"],
         "body": [
-            "<${1:associateWith} name::\"${2:tagName}/>\""
+            "<${1:associateWith} name::\"${2:tagName}\"/>"
         ],
         "definition": "Generate tag"
     },
@@ -38,26 +38,26 @@
     },
 
     "Declarative Skriptr Line": {
-        "prefix": ["dsl"],
+        "prefix": ["!dsl"],
         "body": ["@${1:speaker} ${2:dialogue}<"],
         "description": "Skriptr Line with Declarative Role."
     },
 
     "Partial Declarative Skriptr Line": {
-        "prefix": ["pdsl"],
+        "prefix": ["!pdsl"],
         "body": ["@${1:speaker}>${2:expression/voice} ${3:dialogue}<"],
         "description": "Skriptr Line with Declarative Role with Partial Cast Signature."
     },
 
     "Full Declarative Skriptr Line": {
-        "prefix": ["dslfull"],
+        "prefix": ["!dslfull"],
         "body": ["@${1:speaker}>${2:expression}>${3:voice} ${4:dialogue}<"],
         "description": "Skriptr Line with Declarative Role and Full Cast Signature."
     },
 
     "Interrogative Skripter Line": 
     {
-        "prefix": ["itrg"],
+        "prefix": ["!itrg"],
         "body": [
             "?${1:speaker} ${2:dialogue}>>", 
             "(", 
@@ -74,7 +74,7 @@
 
     "Partial Interrogative Skripter Line": 
     {
-        "prefix": ["pitrg"],
+        "prefix": ["!pitrg"],
         "body": [
             "?${1:speaker}>${2:expression/voice} ${3:dialogue}>>", 
             "(", 
@@ -91,7 +91,7 @@
 
     "Full Interrogative Skripter Line": 
     {
-        "prefix": ["itrgfull"],
+        "prefix": ["!itrgfull"],
         "body": [
             "?${1:speaker}>${2:expression}>${3:voice} ${4:dialogue}>>", 
             "(", 
@@ -108,7 +108,7 @@
 
     "Empty Interrogative Skripter Line": 
     {
-        "prefix": ["-itrg"],
+        "prefix": ["!-itrg"],
         "body": [
             "?${1:speaker} ${2:dialogue}>>", 
             "(", 
@@ -120,7 +120,7 @@
 
     "Empty Partial Interrogative Skripter Line": 
     {
-        "prefix": ["-pitrg"],
+        "prefix": ["!-pitrg"],
         "body": [
             "?${1:speaker}>${2:expression/voice} ${3:dialogue}>>", 
             "(", 
@@ -132,7 +132,7 @@
 
     "Empty Full Interrogative Skripter Line": 
     {
-        "prefix": ["-itrgfull"],
+        "prefix": ["!-itrgfull"],
         "body": [
             "?${1:speaker}>${2:expression}>${3:voice} ${4:dialogue}>>", 
             "(", 
