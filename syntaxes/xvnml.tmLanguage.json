@@ -95,6 +95,12 @@
 				},
 				{
 					"include": "#tuple"
+				},
+				{
+					"include": "#number"
+				},
+				{
+					"include": "#identifier"
 				}
 			]
 		},
@@ -134,6 +140,12 @@
 				},
 				{
 					"include": "#tuple"
+				},
+				{
+					"include": "#number"
+				},
+				{
+					"include": "#identifier"
 				}
 			]
 		},
@@ -157,6 +169,9 @@
 		},
 		{
 			"include": "#loadSceneClause"
+		},
+		{
+			"include": "#number"
 		}
 	],
 	"repository": {
@@ -188,6 +203,15 @@
 					"include": "#singlequotedString"
 				}
 			]
+		},
+		"number":{
+			"begin": "[0-9]*.[0-9]+",
+			"end": "[fFdDiIlL]?",
+			"name": "constant.numeric.decimal.xvnml"
+		},
+		"identifier":{
+			"match": "[A-Za-z0-9._-]+",
+			"name": "entity.name.type.enum.xvnml"
 		},
 		"eventTriggers":{
 			"begin": "\\{!?",

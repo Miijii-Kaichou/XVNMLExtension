@@ -2,7 +2,7 @@
     "name": "xvnmlext",
     "displayName": "XVNMLExt",
     "description": "Language Support for XVNML",
-    "version": "0.2.13",
+    "version": "0.2.143",
     "preview": true,
     "publisher": "Miijii",
     "repository": {
